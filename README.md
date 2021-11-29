@@ -1,1 +1,3 @@
-# Sistema no funcional. Trabajo practico especial, Ajuria.
+# admin: Juancruzajuria@gmail.com
+
+# contraseña: Juan123

@@ -25,15 +25,17 @@
 <article >
     <h1>Lista de Autores</h1>
     {if $admin eq true}
-<form action="agregarAutor" method="POST">
-    <label for="autor">autor</label>
-    <input id="autor" name="autor" type="text" required placeholder="Nombre">
+    <form action="agregarAutor" method="POST">
+        <label for="autor">autor</label>
+        <input id="autor" name="autor" type="text" required placeholder="Nombre">
+        <br>
 
-    <label for="biografia">biografia</label>
-    <input id="biografia" name="biografia" type="text" required placeholder="Biografia">
 
-    <button type="submit">Agregar autor</button>
-<form>
+        <label for="biografia">biografia</label>
+        <textarea id="biografia" name="biografia" type="text" required placeholder="Biografia"></textarea>
+
+        <button type="submit">Agregar autor</button>
+    <form>
     {/if}
     
 

@@ -3,17 +3,21 @@
 require_once('app/models/autores.model.php');
 require_once('app/models/libros.model.php');
 require_once('app/views/autores.view.php');
+require_once "./helpers/auth.helper.php";
 
 class AutorController
 {
     private $autoresModel;
     private $autoresView;
+    private $authHelper;
+
 
     public function __construct()
     {
         $this->autoresModel = new AutoresModel();
         $this->librosModel = new LibrosModel();
         $this->autoresView = new AutoresView();
+        $this->authHelper = new AuthHelper();
     }
 
 

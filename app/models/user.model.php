@@ -56,7 +56,7 @@ class UserModel extends Model
 
     function deleteUser($idUser)
     {
-        $sql = "DELETE FROM usuarios WHERE usuario=?";
+        $sql = "DELETE FROM usuarios WHERE id_usuario=?";
 
         $stm = $this->pdo->prepare($sql);
 

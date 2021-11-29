@@ -30,19 +30,24 @@
 
         <label for="libro">libro</label>
         <input id="libro" name="libro" type="text" required placeholder="Nombre">
+        <br>
+
 
         <label for="id_autor">Autor</label>
-
         <select name="id_autor" id="id_autor">
-
+        
         {foreach from=$autores item=$autor }
         <option value="{$autor->id_autor}">{$autor->autor}</option>
-        {{/foreach}}
+        {/foreach}
 
         </select>
+        <br>
+
 
         <label for="descripcion">descripcion</label>
-        <input id="descripcion" name="descripcion" type="text" required placeholder="Descripcion">
+        <textarea id="descripcion" name="descripcion" type="text" required placeholder="Descripcion"></textarea>
+        <br>
+
 
         <label for="agno">Año</label>
         <input id="agno" name="agno" type="numer" required placeholder="agno">

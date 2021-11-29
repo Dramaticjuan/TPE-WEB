@@ -3,18 +3,23 @@
 require_once('app/models/libros.model.php');
 require_once('app/views/libros.view.php');
 require_once('app/models/autores.model.php');
+require_once "./helpers/auth.helper.php";
+
 
 
 class LibrosController
 {
     private $librosModel;
     private $librosView;
+    private $authHelper;
+
 
     public function __construct()
     {
         $this->librosView = new LibrosView();
         $this->librosModel = new LibrosModel();
         $this->autoresModel = new AutoresModel();
+        $this->authHelper = new AuthHelper();
     }
 
     public function showLibros()
@@ -97,8 +102,8 @@ class LibrosController
     {
         $this->authHelper->checkloggedInAdmin();
 
-        $tarea_id = $params;
-        $this->tareasModel->actualizaTarea($tarea_id);
+        $libro_id = $params;
+        $this->librosModel->eliminarLibro($libro_id);
         $this->librosView->redirectLibros();
     }
 

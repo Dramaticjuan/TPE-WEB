@@ -4,6 +4,7 @@
 <form action="{BASE_URL}editarLibro/{$libro->id}" method="POST">
     <label >Libro</label>
     <input id="libro" name="libro" type="text" placeholder="Nombre" value="{$libro->libro}" required>
+    <br>
 
     <label >Autor</label>
     <select id="id_autor" name="id_autor" type="number" required>
@@ -19,9 +20,13 @@
     {/foreach}
 
     </select>
+    <br>
+
 
     <label for="descripcion">Descripcion</label>
-    <input id="descripcion" name="descripcion" type="text" placeholder="Descripcion" value="{$libro->descripcion}" required>
+    <textarea id="descripcion" name="descripcion" type="text" placeholder="Descripcion" value="{$libro->descripcion}" required>{$libro->descripcion}</textarea>
+    <br>
+
 
     <label for="agno">Año</label>
     <input id="agno" name="agno" type="number" value="{$libro->agno}" placeholder="año" required>
